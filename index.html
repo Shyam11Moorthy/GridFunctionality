@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+    <div class="grid-container">
+        <div id="gd1" class="grid-item grid1"></div>
+        <div id="gd2" class="grid-item grid2"></div>
+        <div id="gd3" class="grid-item grid3"></div>
+        <div id="gd4" class="grid-item grid4"></div>
+        <div id="gd5" class="grid-item grid5"></div>
+        <div id="gd6" class="grid-item grid6"></div>
+        <div id="gd7"class="grid-item grid7"></div>
+        <div  id="gd8"class="grid-item grid8"></div>
+        <div id="gd9" class="grid-item grid9"></div>
+    
+      </div>
+      <span>
+            <input type="button" value="Shuffle" onClick="getShuffle()">            
+      </span>
+      <span>
+            <input type="button" value="Sort" onClick="getSort()"> 
+      </span>
+    </div>
+</body>
+<script src="index.js"></script>
+<style>
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2B8EAD ;
+  padding: 10px;
+  height: 416px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2B8EAD;
+    padding: -35px;
+    height: 16px;
+    margin: -8px 30px 0px 0px;
+    width: 802px;
+    height: 342px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid1 {
+    background-color: #333333 
+}
+.grid2 {
+    background-color: #FFFFFF  
+}
+.grid3 {
+    background-color: #EFEFEF  
+}
+.grid4 {
+    background-color: #72C3DC  
+}
+.grid5 {
+    background-color: #2B8EAD  
+}
+.grid6 {
+    background-color: #6F98A8  
+}
+.grid7 {
+    background-color: #BFBFBF  
+}
+.grid8 {
+    background-color: #2F454E  
+}
+.grid9 {
+    background-color: #000000  
+}
+</style>
+</html>
