@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<body>
-    <div class="container">
-    <div class="grid-container">
-        <div id="gd1" class="grid-item grid1"></div>
-        <div id="gd2" class="grid-item grid2"></div>
-        <div id="gd3" class="grid-item grid3"></div>
-        <div id="gd4" class="grid-item grid4"></div>
-        <div id="gd5" class="grid-item grid5"></div>
-        <div id="gd6" class="grid-item grid6"></div>
-        <div id="gd7"class="grid-item grid7"></div>
-        <div  id="gd8"class="grid-item grid8"></div>
-        <div id="gd9" class="grid-item grid9"></div>
-    
-      </div>
-      <span>
-            <input type="button" value="Shuffle" onClick="getShuffle()">            
-      </span>
-      <span>
-            <input type="button" value="Sort" onClick="getSort()"> 
-      </span>
-    </div>
-</body>
+        <body>
+                <div class="container">
+                    <div class="grid-container">
+                        <div id="gd1" class="grid-item grid1"></div>
+                        <div id="gd2" class="grid-item grid2"></div>
+                        <div id="gd3" class="grid-item grid3"></div>
+                        <div id="gd4" class="grid-item grid4"></div>
+                        <div id="gd5" class="grid-item grid5"></div>
+                        <div id="gd6" class="grid-item grid6"></div>
+                        <div id="gd7" class="grid-item grid7"></div>
+                        <div id="gd8" class="grid-item grid8"></div>
+                        <div id="gd9" class="grid-item grid9"></div>
+                    </div>
+                    <div class="controls-container">
+                        <button class="btn" onClick="getShuffle()">Shuffle</button>
+                        <button class="btn" onClick="getSort()">Sort</button>
+                    </div>
+                </div>
+            </body>
 <script src="index.js"></script>
 <style>
 .container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2B8EAD ;
+  background-color: #dfdfdf;
   padding: 10px;
-  height: 416px;
+  /* height: 416px; */
+  display: flex;
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2B8EAD;
-    padding: -35px;
-    height: 16px;
-    margin: -8px 30px 0px 0px;
-    width: 802px;
-    height: 342px;
+
+.btn {
+  padding: 10px;
+  background: #2b8ead;
+  color: #fff;
+  border: none;
 }
+
+.grid-container {
+  display: grid;
+  background-color: #dfe5e6;
+  flex: 4;
+}
+
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -49,32 +48,80 @@
   font-size: 30px;
   text-align: center;
 }
+
 .grid1 {
-    background-color: #333333 
+  background-color: #333333;
 }
+
 .grid2 {
-    background-color: #FFFFFF  
+  background-color: #ffffff;
 }
+
 .grid3 {
-    background-color: #EFEFEF  
+  background-color: #efefef;
 }
+
 .grid4 {
-    background-color: #72C3DC  
+  background-color: #72c3dc;
 }
+
 .grid5 {
-    background-color: #2B8EAD  
+  background-color: #2b8ead;
 }
+
 .grid6 {
-    background-color: #6F98A8  
+  background-color: #6f98a8;
 }
+
 .grid7 {
-    background-color: #BFBFBF  
+  background-color: #bfbfbf;
 }
+
 .grid8 {
-    background-color: #2F454E  
+  background-color: #2f454e;
 }
+
 .grid9 {
-    background-color: #000000  
+  background-color: #000000;
+}
+
+/* Screen larger than 900px? 3 columns */
+@media screen and (min-width: 376px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .controls-container {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .controls-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    margin-right: 10px;
+  }
+}
+
+.controls-container {
+  flex: 1;
+  display: flex;
+  padding: 30px;
 }
 </style>
 </html>
